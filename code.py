@@ -7,9 +7,11 @@ from nltk.tokenize import word_tokenize
 from nltk.tokenize import sent_tokenize
 from nltk.stem import PorterStemmer
 
+file = 'path/to/file'
+
 pst = PorterStemmer()
 
-text = textract.process('C:/Users/vaibh/Desktop/2.pdf')
+text = textract.process(file)
 String = text.decode('utf-8').replace('\r\n','\n')
 currencies_check = ['USD', 'EUR', 'RS', 'INR', 'ZAR']
 string_check = ['round', 'deliveri', 'return']
